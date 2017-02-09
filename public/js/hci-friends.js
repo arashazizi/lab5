@@ -5,6 +5,16 @@ $(document).ready(function() {
 	initializePage();
 })
 
+
+$(".friend a").click(function(event) {
+	event.preventDefault();
+	var name = $(this).text();
+	var anagram = anagrammedName(name);
+	$(this).text(anagram);
+});
+
+
+
 /*
  * Function that is called when the document is ready.
  */
